@@ -76,9 +76,9 @@ export default function Container() {
                 <p className="text-gray-600">Commits {project.commits}</p>
               </div>
               <div className="text-sm bg-[#0A0D12] p-2 text-gray-500 border border-[#080B10] shadow-lg rounded-lg text-sm overflow-y-auto">
-                <p>/**</p>
+                <p>{'/**'}</p>
                 <p>&nbsp;* {project.description}</p>
-                <p>*/</p>
+                <p>{'*/'}</p>
               </div>
               <div
                 className="bg-yellow-500 rounded-[2px]"
