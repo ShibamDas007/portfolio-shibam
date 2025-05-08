@@ -77,7 +77,7 @@ export default function Container() {
               </div>
               <div className="text-sm bg-[#0A0D12] p-2 text-gray-500 border border-[#080B10] shadow-lg rounded-lg text-sm overflow-y-auto">
                 <p>{'/**'}</p>
-                <p>&nbsp;* {project.description}</p>
+                <p>&nbsp;{'*'} {project.description}</p>
                 <p>{'*/'}</p>
               </div>
               <div
