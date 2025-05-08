@@ -67,61 +67,61 @@ export default function Container() {
   }, [PcEmblaApi]);
 
   const renderProjectCards = () =>
-    repos.length > 0 ? (
-      repos.map((project, i) => (
-        <div key={i} className="min-w-full px-2 cursor-pointer select-none">
-          <div className="flex flex-col justify-between gap-2 bg-[#0D1117] border-2 border-[#17212C] rounded-lg w-full p-6 shadow-lg h-60">
-            <div className="flex justify-between">
-              <p className="text-yellow-600">{project.name}</p>
-              <p className="text-gray-600">Commits {project.commits}</p>
-            </div>
-            <div className="text-sm bg-[#0A0D12] p-2 text-gray-500 border border-[#080B10] shadow-lg rounded-lg text-sm overflow-y-auto">
-              <p>/**</p>
-              <p>&nbsp;* {project.description}</p>
-              <p>*/</p>
-            </div>
-            <div
-              className="bg-yellow-500 rounded-[2px]"
-              onClick={() =>
-                window.open(
-                  `${`https://github.com/ShibamDas007/${project.name}`}`,
-                  "_blank"
-                )
-              }
-            >
-              see the project
-            </div>
-          </div>
-        </div>
-      ))
-    ) : (
-        [1, 2, 3].map((project, i) => (
-        <div key={i} className="min-w-full px-2 cursor-pointer select-none">
-          <div className="flex flex-col gap-2 bg-[#0D1117] border-2 border-[#17212C] rounded-lg w-full p-6 shadow-lg h-full">
-            <div className="flex justify-between">
-              <p className="text-yellow-600">Project {project}</p>
-              <p className="text-gray-600">Commits {project * 2}</p>
-            </div>
-            <div className="text-sm bg-[#0A0D12] p-2 text-gray-500 border border-[#080B10] shadow-lg rounded-lg">
-              <p>/**</p>
-              <p>&nbsp;* React NodeJs SQL</p>
-              <p>&nbsp;* Auth API</p>
-              <p>&nbsp;* JWT + Session</p>
-              <p>&nbsp;* Sequelize ORM</p>
-              <p></p>
+    repos.length > 0
+      ? repos.map((project, i) => (
+          <div key={i} className="min-w-full px-2 cursor-pointer select-none">
+            <div className="flex flex-col justify-between gap-2 bg-[#0D1117] border-2 border-[#17212C] rounded-lg w-full p-6 shadow-lg h-60">
+              <div className="flex justify-between">
+                <p className="text-yellow-600">{project.name}</p>
+                <p className="text-gray-600">Commits {project.commits}</p>
+              </div>
+              <div className="text-sm bg-[#0A0D12] p-2 text-gray-500 border border-[#080B10] shadow-lg rounded-lg text-sm overflow-y-auto">
+                <p>/**</p>
+                <p>&nbsp;* {project.description}</p>
+                <p>*/</p>
+              </div>
+              <div
+                className="bg-yellow-500 rounded-[2px]"
+                onClick={() =>
+                  window.open(
+                    `${`https://github.com/ShibamDas007/${project.name}`}`,
+                    "_blank"
+                  )
+                }
+              >
+                {"see the project"}
+              </div>
             </div>
           </div>
-        </div>
         ))
-    );
+      : [1, 2, 3].map((project, i) => (
+          <div key={i} className="min-w-full px-2 cursor-pointer select-none">
+            <div className="flex flex-col gap-2 bg-[#0D1117] border-2 border-[#17212C] rounded-lg w-full p-6 shadow-lg h-full">
+              <div className="flex justify-between">
+                <p className="text-yellow-600">Project {project}</p>
+                <p className="text-gray-600">Commits {project * 2}</p>
+              </div>
+              <div className="text-sm bg-[#0A0D12] p-2 text-gray-500 border border-[#080B10] shadow-lg rounded-lg">
+                <p>{"/**"}</p>
+                <p>&nbsp;{"* React NodeJs SQL"}</p>
+                <p>&nbsp;{"* Auth API"}</p>
+                <p>&nbsp;{"* JWT + Session"}</p>
+                <p>&nbsp;{"* Sequelize ORM"}</p>
+                <p>{"**/"}</p>
+              </div>
+              <div className="bg-yellow-500 rounded-[2px] text-gray-600">
+                {"see the project"}
+              </div>
+            </div>
+          </div>
+        ));
 
   return (
     <div className="flex justify-center items-center w-full h-full px-10 md:p-10">
       <div className="hidden md:flex flex-row gap-10">
-        {/* Left Side */}
         <div className="lg:w-[520px] h-[400px] flex flex-col justify-center items-center gap-30 p-10">
           <div>
-            <p className="text-green-500 text-sm">Hello I'm</p>
+            <p className="text-green-500 text-sm">Hello Im</p>
             <a
               href="https://github.com/ShibamDas007"
               className="lg:text-6xl text-5xl text-white"
@@ -132,7 +132,7 @@ export default function Container() {
           </div>
           <div>
             <p className="text-gray-700">
-              // write the code below to continue:
+              {"// write the code below to continue:"}
             </p>
             <div className="flex gap-2 relative w-fit">
               <p className="text-purple-500 text-lg">&gt;</p>
@@ -145,7 +145,6 @@ export default function Container() {
           </div>
         </div>
 
-        {/* Right Side Carousel */}
         <div className="w-[400px] h-full flex justify-center items-center overflow-hidden">
           <div className="w-full mt-22" ref={PcEmblaRef}>
             <div className="flex">{renderProjectCards()}</div>
@@ -163,7 +162,7 @@ export default function Container() {
             </div>
             <div className="">
               <p className="text-gray-700">
-                // write the code below to continue:
+                {"// write the code below to continue:"}
               </p>
               <div className="flex gap-2 relative w-fit">
                 <p className="text-purple-500 text-lg">&gt;</p>
